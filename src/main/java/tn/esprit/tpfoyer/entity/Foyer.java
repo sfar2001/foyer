@@ -16,6 +16,8 @@ public class Foyer
     private long idFoyer;
     private String nomFoyer;
     private long capaciteFoyer;
+
+
     @OneToMany(cascade = CascadeType.ALL,mappedBy = "foyer")
     private Set<Block> block;
 
