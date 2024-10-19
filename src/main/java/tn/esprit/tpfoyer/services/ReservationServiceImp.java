@@ -1,5 +1,6 @@
 package tn.esprit.tpfoyer.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tn.esprit.tpfoyer.Repository.ReservationRepository;
 import tn.esprit.tpfoyer.entity.Reservation;
@@ -8,7 +9,8 @@ import java.util.List;
 @Service
 
 public class ReservationServiceImp implements ResrvationServ{
-   ReservationRepository reservationRepository;
+    @Autowired
+    ReservationRepository reservationRepository;
     @Override
     public List<Reservation> retrieveAllReservation() {
         return reservationRepository.findAll();

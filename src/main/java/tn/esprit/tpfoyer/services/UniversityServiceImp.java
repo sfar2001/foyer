@@ -1,5 +1,6 @@
 package tn.esprit.tpfoyer.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tn.esprit.tpfoyer.Repository.UniversiteRepository;
 import tn.esprit.tpfoyer.entity.Universite;
@@ -8,6 +9,7 @@ import java.util.List;
 @Service
 
 public class UniversityServiceImp implements UniversiteServ{
+    @Autowired
     UniversiteRepository universiteRepository;
     @Override
     public List<Universite> retrieveAllUniversite() {
